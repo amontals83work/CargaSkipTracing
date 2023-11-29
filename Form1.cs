@@ -98,7 +98,7 @@ namespace CargaSkipTracing
             }
         }
 
-        private void Telefonoes_AXACTOR(DataTable dt, string tabla)
+        private void Telefonos_AXACTOR(DataTable dt, string tabla)
         {
             mcComm.command.Connection = conn.ObtenerConexion();
             foreach (DataRow fila in dt.Rows)
