@@ -44,6 +44,7 @@
             this.btnCargar.TabIndex = 27;
             this.btnCargar.Text = "Guardar";
             this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // Label3
             // 
@@ -63,6 +64,7 @@
             this.btnFichero.TabIndex = 25;
             this.btnFichero.Text = "...";
             this.btnFichero.UseVisualStyleBackColor = true;
+            this.btnFichero.Click += new System.EventHandler(this.btnFichero_Click);
             // 
             // txtFichero
             // 
@@ -102,6 +104,7 @@
             this.Controls.Add(this.Label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
