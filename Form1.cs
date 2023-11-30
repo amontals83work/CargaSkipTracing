@@ -75,7 +75,7 @@ namespace CargaSkipTracing
                     case 81://AXACTOR
                         {
                             string tabla = "AXATELEFONOS";//AXATELEFONOS//_Pruebas_SkTr_AXACTOR
-                            Telefonoes_AXACTOR(dt, tabla);
+                            Telefonos_AXACTOR(dt, tabla);
                             break;
                         }
                     case 83://NASSAU
@@ -100,9 +100,11 @@ namespace CargaSkipTracing
 
         private void Telefonos_AXACTOR(DataTable dt, string tabla)
         {
+            int count = 0;
             mcComm.command.Connection = conn.ObtenerConexion();
             foreach (DataRow fila in dt.Rows)
             {
+                count++;
                 string idcliente = fila[1].ToString();
                 string telefono = fila[4].ToString();
 
@@ -114,7 +116,7 @@ namespace CargaSkipTracing
                 mcComm.command.Parameters.AddWithValue("@value2", telefono);
                 mcComm.ExecuteNonQuery();
             }
-            MessageBox.Show("Guardado con éxito.");
+            MessageBox.Show("Guardado con éxito " + count + " registros.");
         }
 
         private string nHoja()
